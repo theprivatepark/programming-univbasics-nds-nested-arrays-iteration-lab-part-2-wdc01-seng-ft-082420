@@ -12,14 +12,13 @@ def find_min_in_nested_arrays(src)
     smallest_element = row[column_index]
     
     while column_index < row.count do
-      #if row[column_index] < smallest_element
-       # smallest_element = row[column_index]
-      #end
-      smallest_element = row.min
+      if row[column_index] < smallest_element
+        smallest_element = row[column_index]
+      end
       column_index += 1 
     end
     
-    results_array << row.min
+    results_array << smallest_element
     row_index += 1
   end
   results_array
